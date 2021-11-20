@@ -1,4 +1,4 @@
-import datetime, json
+import datetime, json, sched, time
 from uk_covid19 import Cov19API
 
 def parse_csv_data(csv_filename: str) -> list:
@@ -58,4 +58,7 @@ def process_covid_json_data(file_name):
     f.close()
     return cases_last_7_days, current_hospital_cases, total_deaths
 
-print(process_covid_json_data("data.json"))
+def schedule_covid_updates(update_interval, update_name):
+    s = sched.scheduler(time.time, time.sleep)
+    e1 = s.enter(update_interval,1,update_name,,))
+    s.run()
