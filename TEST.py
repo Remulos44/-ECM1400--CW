@@ -1,3 +1,7 @@
+"""
+This is a test module
+"""
+
 from uk_covid19 import Cov19API
 
 def covid_API_request(location = "Exeter", location_type = "ltla"):
