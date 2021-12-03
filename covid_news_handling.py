@@ -17,10 +17,12 @@ def news_API_request(search_terms = "Covid COVID-19 coronavirus"):
 def filtered_news(removed_articles):
     #Removes articles that have been deleted by the user
     news = news_API_request()
-    for article in removed_articles:
-        if article in news_API_request['articles']:
-            news_API_request['articles'].remove(article)
-    return news
+    for article_title in removed_articles:
+        for article in news['articles']:
+            if article_title == article['title']:
+                index = news['articles'].index(article)
+                del news['articles'][index]
+    return news['articles']
 
 def update_news():
     schedule_covid_updates(60**2, news_API_request())
