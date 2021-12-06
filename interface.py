@@ -1,21 +1,29 @@
+"""
+Module for handling the HTML interface
+"""
+
+import sched
+import time
+import json
 from flask import Flask, render_template, request
-import sched, time, json
 from covid_news_handling import filtered_news
 from covid_data_handler import process_covid_json_data
 
 app = Flask(__name__)
 s = sched.scheduler(time.time, time.sleep)
 
-with open('removed_articles.json', 'r') as f:
-    file = json.load(f)
-    removed_articles = file["articles"]
+with open('removed_articles.json', 'r', encoding='utf-8') as f:
+    removed_article_titles = json.load(f)
+    removed_articles = removed_article_titles["articles"]
 
 news = filtered_news(removed_articles)
 
 @app.route('/')
 @app.route('/index')
 def initial():
-
+    """
+    Function to be called when visiting website interface
+    """
     #<<< Covid Data >>>#
     cases_last_7_days, current_hospital_cases, total_deaths = process_covid_json_data()
 
@@ -24,7 +32,7 @@ def initial():
     remove_article(article_to_remove_title)
 
     #<<< Scheduler >>>#
-    
+
 
     return render_template(
         'index.html',
@@ -39,17 +47,20 @@ def initial():
         )
 
 def remove_article(title):
+    """
+    Function to remove article from list
+    """
     print("Title: " + title)
-    with open('removed_articles.json', 'r') as f:
-        data = json.load(f)
+    with open('removed_articles.json', 'r', encoding='utf-8') as file:
+        data = json.load(file)
     if title != 'None' and (title not in data['articles']):
         data['articles'].append(title)
         for article in news:
             if article['title'] == title:
                 index = news.index(article)
                 del news[index]
-        with open('removed_articles.json', 'w') as f:
-            json.dump(data, f, indent=4)
+        with open('removed_articles.json', 'w', encoding='utf-8') as file:
+            json.dump(data, file, indent=4)
 
 if __name__ == "__main__":
     app.run()
