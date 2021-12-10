@@ -101,12 +101,11 @@ def schedule_covid_updates(update_name, update_interval=10, repeat="False"):
 
     print("TESTING: Scheduling covid update events")
     s.enter(update_interval, 1, process_covid_json_data)
-    s.enter(update_interval, 2, remove_update_item, argument=update_name)
+    s.enter(update_interval, 2, remove_update_item, update_name)
     if repeat == "True":
         print("TESTING: repeat=True, scheduling repeat event")
-        s.enter(update_interval, 3, repeat_schedule_updates,
-                argument=update_name)
-    s.run()
+        s.enter(update_interval, 3, repeat_schedule_updates, update_name)
+    s.run(blocking=False)
 
 
 def repeat_schedule_updates(update_name):

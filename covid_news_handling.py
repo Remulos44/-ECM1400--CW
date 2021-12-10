@@ -67,11 +67,11 @@ def update_news(update_name, update_interval=10, repeat="False"):
 
     print("TESTING: Scheduling news update events")
     s.enter(update_interval, 1, filtered_news)
-    s.enter(update_interval, 2, remove_update_item, argument=update_name)
+    s.enter(update_interval, 2, remove_update_item, update_name)
     if repeat == "True":
         print("TESTING: repeat=True, scheduling repeat event")
-        s.enter(update_interval, 3, repeat_news_update, argument=update_name)
-    s.run()
+        s.enter(update_interval, 3, repeat_news_update, update_name)
+    s.run(blocking=False)
 
 
 def repeat_news_update(update_name):
