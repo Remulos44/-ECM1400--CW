@@ -1,0 +1,41 @@
+[
+    {
+        "source": {
+            "id": "cnn",
+            "name": "CNN"
+        },
+        "author": "Maggie Fox, CNN",
+        "title": "All vaccinated adults should get a Covid-19 booster shot because of the Omicron variant, CDC says",
+        "description": "The US Centers for Disease Control and Prevention strengthened recommendations for booster doses of coronavirus vaccine Monday, saying all adults should get boosted six months after the second dose of Pfizer/BioNTech's or Moderna's vaccine or two months after\u2026",
+        "url": "https://www.cnn.com/2021/11/29/health/cdc-booster-guidance-omicron/index.html",
+        "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/211129155211-covid-booster-shots-file-102521-restricted-super-tease.jpg",
+        "publishedAt": "2021-11-29T21:06:30Z",
+        "content": "(CNN)The US Centers for Disease Control and Prevention strengthened recommendations for booster doses of coronavirus vaccine Monday, saying all adults should get boosted six months after the second d\u2026 [+2293 chars]"
+    },
+    {
+        "source": {
+            "id": "reuters",
+            "name": "Reuters"
+        },
+        "author": null,
+        "title": "Ranieri urges players to get COVID-19 vaccine - Reuters",
+        "description": "Watford manager Claudio Ranieri has urged players to get vaccinated against COVID-19 in the wake of a coronavirus outbreak at Tottenham Hotspur.",
+        "url": "https://www.reuters.com/lifestyle/sports/ranieri-urges-players-get-covid-19-vaccine-2021-12-09/",
+        "urlToImage": "https://www.reuters.com/resizer/QHwov-kNwzkTdbkuuBFlPWm0A9k=/1200x628/smart/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/L4TXRDTAIBKARA2JMH7TVXGONI.jpg",
+        "publishedAt": "2021-12-09T14:58:00Z",
+        "content": "Dec 9 (Reuters) - Watford manager Claudio Ranieri has urged players to get vaccinated against COVID-19 in the wake of a coronavirus outbreak at Tottenham Hotspur.\r\nTottenham's Europa Conference Leagu\u2026 [+1058 chars]"
+    },
+    {
+        "source": {
+            "id": "reuters",
+            "name": "Reuters"
+        },
+        "author": null,
+        "title": "Swiss group lights 11288 candles for COVID-19 victims - Reuters",
+        "description": "More than 11,000 candles - one for each Swiss victim of the coronavirus pandemic - lit up the December darkness outside the Swiss parliament in Bern on Tuesday.",
+        "url": "https://www.reuters.com/world/europe/swiss-group-lights-11288-candles-covid-19-victims-2021-12-07/",
+        "urlToImage": "https://www.reuters.com/pf/resources/images/reuters/reuters-default.png?d=60",
+        "publishedAt": "2021-12-07T23:26:00Z",
+        "content": "BERN, Dec 7 (Reuters) - More than 11,000 candles - one for each Swiss victim of the coronavirus pandemic - lit up the December darkness outside the Swiss parliament in Bern on Tuesday.\r\n\"We want to c\u2026 [+1002 chars]"
+    }
+]
